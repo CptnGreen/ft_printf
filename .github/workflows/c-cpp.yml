@@ -18,7 +18,7 @@ jobs:
     - name: add ceedling to path
       run: export PATH="$PATH:~/.gem/ruby/2.5.0/bin"
     - name: clone libft submodule
-      run: git submodule init && git submodule update
+      run: sudo git submodule init && sudo git submodule update
     - name: make all
       run: make
     - name: run tests
