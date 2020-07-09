@@ -1,0 +1,15 @@
+*** Install
+
+Aim of this project is to create library =libftprintf=, containing =ft_printf= function and all the functions from standard =libft=.
+
+=libft= library is included as submodule, to clone everything including it run
+
+#+BEGIN_SRC bash
+
+git clone git@github.com:CptnGreen/ft_printf.git --recursive
+
+#+END_SRC
+
+If you wish to use your own =libft= just replace existing "libft" folder with your version.
+
+To build =libftprintf= just run =make=.
