@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
     - name: install ceedling
       run: sudo gem install ceedling
     - name: add ceedling to path
