@@ -12,6 +12,8 @@
 
 .PHONY: all clean fclean re libft exec norm memcheck
 
+CC = clang
+
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 EXEC = ft_printf
@@ -57,7 +59,7 @@ OBJ = $(addprefix $(OBJ_DIR)/,$(SRC_RAW:.c=.o))
 all: $(NAME)
 
 $(EXEC): $(NAME)
-	@ gcc $(CFLAGS) -o $(EXEC) $(MAIN) -I "includes/" -I "libft/includes/" -L . -lftprintf -L "libft/" -lft
+	@ $(CC) $(CFLAGS) -o $(EXEC) $(MAIN) -I "includes/" -I "libft/includes/" -L . -lftprintf -L "libft/" -lft
 
 $(NAME): libft $(OBJ_DIR) $(OBJ)
 	@ cp ./libft/libft.a $(NAME)
@@ -66,7 +68,7 @@ $(NAME): libft $(OBJ_DIR) $(OBJ)
 libft:
 	@ make -C libft/
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@ gcc $(CFLAGS) -I "includes/" -I "libft/includes/" -c $< -o $@
+	@ $(CC) $(CFLAGS) -I "includes/" -I "libft/includes/" -c $< -o $@
 $(OBJ_DIR):
 	@ mkdir -p $(OBJ_DIR)
 
