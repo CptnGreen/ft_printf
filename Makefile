@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fcatina <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: slisandr <slisandr@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 15:25:21 by fcatina           #+#    #+#              #
-#    Updated: 2020/02/26 12:34:10 by slisandr         ###   ########.fr        #
+#    Updated: 2020/10/20 23:28:58 by slisandr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re libft exec norm memcheck
 
-CC = clang
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
