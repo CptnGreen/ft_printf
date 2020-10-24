@@ -35,7 +35,6 @@
     - -:test/support
   :source:
     - src/**
-    - libft/src/**
   :include:
     - includes/**
     - libft/includes/**
@@ -92,8 +91,8 @@
   :placement: :end
   :flag: "-l${1}"
   :path_flag: "-L ${1}"
-  :system: [ft, ftprintf]    # for example, you might list 'm' to grab the math library
-  :test: []
+  :system: []    # for example, you might list 'm' to grab the math library
+  :test: [ft, ftprintf]
   :release: []
 
 :plugins:
