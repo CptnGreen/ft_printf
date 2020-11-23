@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: slisandr <slisandr@student.21-school.ru    +#+  +:+       +#+         #
+#    By: slisandr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 15:25:21 by fcatina           #+#    #+#              #
-#    Updated: 2020/10/20 23:28:58 by slisandr         ###   ########.fr        #
+#    Updated: 2020/11/23 08:16:56 by slisandr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,10 +83,8 @@ fclean: clean
 	@ make -C libft/ fclean
 re: fclean all
 
-norm: fclean
-	@ rm -f $(EXEC)
-	@ clear && clear && clear
-	@ /Users/slisandr/.scripts/colorised_norm.sh
+norm:
+	@ ./check_norm.sh
 
 memcheck: exec
 	@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt ./$(EXEC)
